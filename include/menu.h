@@ -16,10 +16,10 @@ struct Menu {
     Menu(std::function<void()> beforeStart, bool clr = true)
         : beforeStart{beforeStart}, clr{clr} {
     }
-    
+
     void clearScreen() const {
         if (clr)
-            std::cout << "\033[2J\033[1;1H";
+            system("cls");
     }
 
     static int getInt(int l, int r) {
